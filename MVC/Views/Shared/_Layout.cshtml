@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/alertify.min.css" rel="stylesheet" />
+    <link href="~/Content/alertifyjs/themes/default.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
+        <div class="container">
+            @Html.ActionLink("Employee Register", "Index", "Employee", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Web API CRUD Operation in MVC Project</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/alertify.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
